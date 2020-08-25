@@ -5,7 +5,7 @@ const queries = {
     createUser: 'INSERT INTO users(username, name, email) values($1,$2,$3)',
     createTransaction: 'Insert into transactions (userid, amount, mode, walletid, timestamp) values($1,$2,$3,$4,$5)',
     createWalletEntry: 'Insert into wallets (userid) values($1)',
-    getTransactionForUser: 'SELECT amount, mode, timestamp FROM transactions WHERE userid = $1',    
+    getTransactionForUser: 'SELECT transaction_id, amount, mode, timestamp FROM transactions WHERE userid = $1',    
 }
 
 module.exports = queries;
